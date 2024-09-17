@@ -88,3 +88,6 @@ e = magnifation factor\
 N = n of self similar obj
 
 D = log_e(N) = dimension
+
+example: Serpinski Triangle\
+D = log_2(3) = 1.58

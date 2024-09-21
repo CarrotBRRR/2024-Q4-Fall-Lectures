@@ -12,7 +12,7 @@
 - Self Similar: N = 4
 - Magnification: e = 3
 
-D_f = log_e(N) = log_3(4) = 1.26
+$D_f = log_e(N) = log_3(4) = 1.26$
 
 - Euclidean Dimension is 1
 
@@ -49,11 +49,11 @@ D_f = log_e(N) = log_3(4) = 1.26
 - Dot Product or Inner Product:\
 
 - Definition in 2D and 3D:\
-`u.v = ||u|| ||v|| cos(theta)`\
-`u.v = u1v1 + u2v2 + u3v3`
+$u.v = ||u||*||v|| cos(theta)$\
+$u.v = u_1v_1 + u_2v_2 + u_3v_3$
 
 Also:
-`cos(theta) = u.v /( ||u|| ||v|| )`
+$cos(theta) = u\cdot v /( ||u||*||v|| )$
 
 Example:\
 u = [1, 0], v = [1, 1]\

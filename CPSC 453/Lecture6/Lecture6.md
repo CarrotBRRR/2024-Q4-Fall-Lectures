@@ -64,7 +64,10 @@ $\begin{bmatrix} S_x & 0 & 0 & 0\\ 0 & S_y & 0 & 0\\ 0 & 0 & S_z & 0\\ 0 & 0 & 0
 $\begin{bmatrix} 1 & 0 & 0 & T_x\\ 0 & 1 & 0 & T_y\\ 0 & 0 & 1 & T_z\\ 0 & 0 & 0 & 1 \end{bmatrix}$ is a translation matrix
 
 #### Rotation
-$\begin{bmatrix} R_{11} & R_{12} & R_{13} & 0\\ R_{21} & R_{22} & R_{23} & 0\\ R_{31} & R_{32} & R_{33} & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}$ is a rotation matrix
+$\begin{bmatrix} R_{11} & R_{12} & R_{13} & 0\\ R_{21} & R_{22} & R_{23} & 0\\ R_{31} & R_{32} & R_{33} & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}$ is a rotation matrix\
+
+#### Shear
+$\begin{bmatrix} 1 & S_{xy} & S_{xz} & 0\\ S_{yx} & 1 & S_{yz} & 0\\ S_{zx} & S_{zy} & 1 & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}$ is a shear matrix
 
 #### We have 12 degrees of freedom in 3D Affine Transformations
 
@@ -75,3 +78,29 @@ $\begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{24}\\ a_{31} &
 $\begin{bmatrix} a_{14} \\ a_{24} \\ a_{34} \end{bmatrix}$ are for Translation
 
 #### For a unique solution, we need 4 points that are not coplanar
+
+## Example for Quiz
+Consider a 3D Shear Parallel to the $x$-axis by $+3z$\
+What is the resulr of this transformation on the point $P = \begin{bmatrix} 1\\ 1\\ 1 \end{bmatrix}$
+
+$P' = \begin{bmatrix} 1 & 0 & 3 & 0\\ 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1\\ 1\\ 1\\ 1 \end{bmatrix}$ = $\begin{bmatrix} 1 + 3\\ 1\\ 1\\ 1 \end{bmatrix}$ = $\begin{bmatrix} 4\\ 1\\ 1\\ 1 \end{bmatrix}$
+
+### Finding the Inverse of a 3D Affine Transformation
+#### Scaling
+$\begin{bmatrix} 1/S_x & 0 & 0 & 0\\ 0 & 1/S_y & 0 & 0\\ 0 & 0 & 1/S_z & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}$\
+is the inverse of the scaling matrix:\
+$\begin{bmatrix} S_x & 0 & 0 & 0\\ 0 & S_y & 0 & 0\\ 0 & 0 & S_z & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}$
+
+#### Translation
+$\begin{bmatrix} 1 & 0 & 0 & -T_x\\ 0 & 1 & 0 & -T_y\\ 0 & 0 & 1 & -T_z\\ 0 & 0 & 0 & 1 \end{bmatrix}$\
+is the inverse of a translation matrix:\
+$\begin{bmatrix} 1 & 0 & 0 & T_x\\ 0 & 1 & 0 & T_y\\ 0 & 0 & 1 & T_z\\ 0 & 0 & 0 & 1 \end{bmatrix}$
+
+#### Rotation
+$\begin{bmatrix} R_{11} & R_{21} & R_{31} & 0\\ R_{12} & R_{22} & R_{32} & 0\\ R_{13} & R_{23} & R_{33} & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}$\
+is the inverse of a rotation matrix\
+(**transpose** of the original rotation matrix):\
+$\begin{bmatrix} R_{11} & R_{12} & R_{13} & 0\\ R_{21} & R_{22} & R_{23} & 0\\ R_{31} & R_{32} & R_{33} & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}$
+
+#### Shear
+$\begin{bmatrix} 1 & -S_{xy} & -S_{xz} & 0\\ -S_{yx} & 1 & -S_{yz} & 0\\ -S_{zx} & -S_{zy} & 1 & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}$ is the inverse of a shear matrix

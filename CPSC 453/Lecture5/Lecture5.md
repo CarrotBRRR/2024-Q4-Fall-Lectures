@@ -6,7 +6,7 @@ y ] = sinθ , cosθ ]
 x' = x\*cosθ - y\*sinθ\
 y' = x\*sinθ + y\*cosθ
 
-### example: 90 degree rotation\
+### example: 90 degree rotation
 x' = x\*0 - y\*1 = -y\
 y' = x\*1 + y\*0 = x
 

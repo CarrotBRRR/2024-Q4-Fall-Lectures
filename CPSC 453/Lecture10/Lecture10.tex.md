@@ -97,7 +97,7 @@ x' / x = d / z
 \downarrow
 ```
 ```math
-x' = x * d / z
+x' = x \cdot d / z
 ```
 
 ```math
@@ -107,7 +107,7 @@ y' / y = d / z
 \downarrow
 ```
 ```math
-y' = y * d / z
+y' = y \cdot d / z
 ```
 
 
@@ -129,11 +129,7 @@ Note:
 ```math
 \begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}
 ```
-
-
-> ```math
-\begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}```
- is outside the affine space
+- is outside the affine space
 
 ```math
 \begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}
@@ -143,26 +139,20 @@ represents all points on the line from the origin to
 \begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}
 ```
 
+```math
+W = 1: \begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}
+```
 
 ```math
-W = 1:```math
- ```math
-\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}```
-\
+W = 2: \begin{bmatrix} 4 \\ -2 \\ 2 \end{bmatrix}
+```
+
 ```math
-W = 2:```math
- ```math
-\begin{bmatrix} 4 \\ -2 \\ 2 \end{bmatrix}```
-\
+W = 3: \begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}
+```
+
 ```math
-W = 3:```math
- ```math
-\begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}```
-\
-```math
-W = 1/2:```math
-```math
-\begin{bmatrix} 1 \\ -1/2 \\ 1/2 \end{bmatrix}
+W = 1/2: \begin{bmatrix} 1 \\ -1/2 \\ 1/2 \end{bmatrix}
 ```
 
 So in general:

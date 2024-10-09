@@ -15,7 +15,9 @@ $x_p = x + \Delta x = x + L cos(\phi) = x + z cot(\alpha)cos(\phi)$\
 $y_p= y + \Delta y = y + L sin(\phi) = y + z cot(\alpha)sin(\phi)$
 
 example:\
+```math
 $\begin{bmatrix} x_p \\ y_p \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 & cos(\phi)cot(\alpha) & 0 \\ 0 & 1 & sin(\phi)cot(\alpha) & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$
+```
 
 #### Special Case: Cavalier Projection
 - $\phi = 45^{\circ}$

@@ -85,9 +85,9 @@ $P = \begin{bmatrix} -5 \\ 10 \\ 2 \end{bmatrix}$ is given
 Representer in Affine Space: $\begin{bmatrix} -5/2 \\ 10/2 \\ 2/2 \end{bmatrix} = \begin{bmatrix} -2.5 \\ 5 \\ 1 \end{bmatrix}$
 
 ### Closed Form of Perspective Projection
-    $x' = x * d / z$\
-    $y' = y * d / z$\
-    $z' = d$
+$x' = x \cdot d / z$\
+$y' = y \cdot d / z$\
+$z' = d$
 
 - Non-linear transformation
 

@@ -12,10 +12,12 @@
 - The projector can be specified by a 2 angles
 
 ```math
-x_p = x + \Delta x = x + L cos(\phi) = x + z cot(\alpha)cos(\phi)```
-\
+x_p = x + \Delta x = x + L cos(\phi) = x + z cot(\alpha)cos(\phi)
+```
+
 ```math
-y_p= y + \Delta y = y + L sin(\phi) = y + z cot(\alpha)sin(\phi)```
+y_p= y + \Delta y = y + L sin(\phi) = y + z cot(\alpha)sin(\phi)
+```
 
 
 example:\
@@ -24,57 +26,52 @@ example:\
 ```
 
 #### Special Case: Cavalier Projection
-- ```math
-\phi = 45^{\circ}```
+- $\phi = 45^{\circ}$
+- $cot(\phi) = 1$
+    - $x_p = x + z$
 
-- ```math
-cot(\phi) = 1```
-
-    - ```math
-    x_p = x + z```
-
-    - ```math
-    y_p = y + z```
+    - $y_p = y + z$
 
 
 #### Special Case: Cabinet Projection
-- ```math
-\phi = 63.4^{\circ}```
+- $\phi = 63.4^{\circ}$
 
-- ```math
-cot(\phi) = 0.5```
+- $cot(\phi) = 0.5$
 
-    - ```math
-    x_p = x + 0.5z```
+    - $
+    x_p = x + 0.5z$
 
-    - ```math
-    y_p = y + 0.5z```
+    - $y_p = y + 0.5z$
 
 
 ### Quiz Example:
-What is the result of applying oblique projection where ```
-\phi = 45^{\circ}```
- and ```
-cot(\alpha) = 2```
+What is the result of applying oblique projection where $
+\phi = 45^{\circ}$
+ and $
+cot(\alpha) = 2$
  to the point (1, 3, 3)?
 
 #### Answer
 ```math
-\begin{bmatrix} x_p \\ y_p \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 2 & 0 \\ 0 & 1 & 2 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ 3 \\ 3 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 5 \\ 0 \\ 1 \end{bmatrix}```
+\begin{bmatrix} x_p \\ y_p \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 2 & 0 \\ 0 & 1 & 2 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ 3 \\ 3 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 5 \\ 0 \\ 1 \end{bmatrix}
+```
 
 
 ### Perspective Projection
 ![Derivation of Perspective Projection](<images/Screenshot 2024-10-08 144052.png>)
 
-Example:\
+Example:
 ```math
- O = (0, 0, 0)```
-\
+O = (0, 0, 0)
+```
+
 ```math
- P = (x, y, z)```
-\
+P = (x, y, z)
+```
+
 ```math
- P' = (x', y', z')```
+P' = (x', y', z')
+```
 
 
 ```math
@@ -111,19 +108,27 @@ Note:
 - Recall: the extra coordinate is used to represent "another floor"
 > ex:\
 ```math
-\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}```
- -> ```math
-\begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}```
+\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}
+```
+```math
+\downarrow
+```
+```math
+\begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}
+```
 
 
 > ```math
 \begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}```
  is outside the affine space
 
->  ```math
-\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}```
- represents all points on the line from the origin to ```math
-\begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}```
+```math
+\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}
+```
+represents all points on the line from the origin to 
+```math
+\begin{bmatrix} 6 \\ -3 \\ 3 \end{bmatrix}
+```
 
 
 ```math
@@ -143,37 +148,43 @@ W = 3:```math
 \
 ```math
 W = 1/2:```math
- ```math
-\begin{bmatrix} 1 \\ -1/2 \\ 1/2 \end{bmatrix}```
- \
+```math
+\begin{bmatrix} 1 \\ -1/2 \\ 1/2 \end{bmatrix}
+```
+
 So in general:
 ```math
-\begin{bmatrix} 2W \\ -W \\ W \end{bmatrix}```
+\begin{bmatrix} 2W \\ -W \\ W \end{bmatrix}
+```
 
-> Divide by W,\
+- Divide by W,\
 aka normalization
 
 #### Example:
 ```math
-P = \begin{bmatrix} -5 \\ 10 \\ 2 \end{bmatrix}```
- is given
+P = \begin{bmatrix} -5 \\ 10 \\ 2 \end{bmatrix}
+```
+is given
 > Outside Affine Space
 > Divide by W (2 in this case) to get the point in the affine space
 
-Representer in Affine Space: ```math
-\begin{bmatrix} -5/2 \\ 10/2 \\ 2/2 \end{bmatrix} = \begin{bmatrix} -2.5 \\ 5 \\ 1 \end{bmatrix}```
-
+Representer in Affine Space: 
+```math
+\begin{bmatrix} -5/2 \\ 10/2 \\ 2/2 \end{bmatrix} = \begin{bmatrix} -2.5 \\ 5 \\ 1 \end{bmatrix}
+```
 
 ### Closed Form of Perspective Projection
 ```math
-x' = x \cdot d / z```
-\
-```math
-y' = y \cdot d / z```
-\
-```math
-z' = d```
+x' = x \cdot d / z
+```
 
+```math
+y' = y \cdot d / z
+```
+
+```math
+z' = d
+```
 
 - Non-linear transformation
 
@@ -181,46 +192,78 @@ z' = d```
 #### Quiz Example:
 Given a 3D point, what is the point in the affine space?\
 ```math
-P_o = \begin{bmatrix} 6 \\ -6 \\ 9 \\ 3 \end{bmatrix}```
-\
-```math
-P = \begin{bmatrix} W_x \\ W_y \\ W_z \\ 1\end{bmatrix}```
-
+P_o = \begin{bmatrix} 6 \\ -6 \\ 9 \\ 3 \end{bmatrix}
+```
 
 ```math
-P' = \begin{bmatrix} 3 \\ -3 \\ 4.5 \\ 1.5 \end{bmatrix}```
+P = \begin{bmatrix} W_x \\ W_y \\ W_z \\ 1\end{bmatrix}
+```
+
+```math
+P' = \begin{bmatrix} 3 \\ -3 \\ 4.5 \\ 1.5 \end{bmatrix}
+```
 
 
 ### Summary
 ```math
-\begin{bmatrix} P \\ 1 \end{bmatrix}```
- -> manipulate ->```math
-\begin{bmatrix} Q \\ W \end{bmatrix}```
- -> ``math
-\begin{bmatrix} Q/W \\ 1 \end{bmatrix}```
+\begin{bmatrix} P \\ 1 \end{bmatrix}
+```
+
+```math
+\downarrow
+```
+```math
+manipulate
+```
+```math
+\downarrow
+```
+```math
+\begin{bmatrix} Q \\ W \end{bmatrix}
+```
+```math
+\downarrow
+```
+
+```math
+\begin{bmatrix} Q/W \\ 1 \end{bmatrix}
+```
 
 
 ### NURBS
 - Non-Uniform Rational B-Splines
 ```math
-x_p = x d/z```
-\
-```math
-y_p = y d/z```
-\
-```math
-z_p = d```
-
+x_p = x d/z
+```
 
 ```math
-d/z```
- -> ```math
-1/w```
-
+y_p = y d/z
+```
 
 ```math
-\begin{bmatrix} x \\ y \\ z \\ z/d \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 1/d & 0 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}```
- -> ```math
-\begin{bmatrix} x \cdot d/z\\ y \cdot d/z \\ z \cdot d/z \\ 1 \end{bmatrix}```
- = ```math
-\begin{bmatrix} x_p \\ y_p \\ d \\ 1 \end{bmatrix}```
+z_p = d
+```
+##
+
+```math
+d/z
+```
+```math
+\downarrow
+``` 
+```math
+1/w
+```
+# 
+
+```math
+\begin{bmatrix} x \\ y \\ z \\ z/d \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 1/d & 0 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}
+```
+```math
+\downarrow
+```
+```math
+\begin{bmatrix} x \cdot d/z\\ y \cdot d/z \\ z \cdot d/z \\ 1 \end{bmatrix}
+=
+\begin{bmatrix} x_p \\ y_p \\ d \\ 1 \end{bmatrix}
+```

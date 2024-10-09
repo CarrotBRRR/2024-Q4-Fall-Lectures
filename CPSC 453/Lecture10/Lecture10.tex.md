@@ -75,27 +75,40 @@ P' = (x', y', z')
 
 
 ```math
- Q = (0 , 0, z)```
-\
+ Q = (0 , 0, z)
+```
+
 ```math
- Q' = (0, 0, d)```
+ Q' = (0, 0, d)
+```
 
 
 ```math
-\Delta OP'Q' = \Delta OPQ```
-\
+\Delta OP'Q' = \Delta OPQ
+```
+
 because the triangles are similar and the angles are the same\
 
 so\
 ```math
-x' / x = d / z ```
- -> ```math
-x' = x * d / z```
-\
+x' / x = d / z 
+```
 ```math
-y' / y = d / z ```
- -> ```math
-y' = y * d / z```
+\downarrow
+```
+```math
+x' = x * d / z
+```
+
+```math
+y' / y = d / z
+```
+```math
+\downarrow
+```
+```math
+y' = y * d / z
+```
 
 
 Note:
@@ -106,7 +119,7 @@ Note:
 ### Extended Homogeneous Coordinate System
 - Generalize homogeneous coordinate system
 - Recall: the extra coordinate is used to represent "another floor"
-> ex:\
+- ex:
 ```math
 \begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}
 ```

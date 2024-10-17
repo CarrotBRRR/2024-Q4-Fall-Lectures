@@ -21,3 +21,12 @@ Projections:
     - Oblique
 - Perspective
 - Non-Linear
+
+## Modeling
+### Curves, Surfaces, Meshes
+- Parametric Models:
+    - From Curves to Surfaces
+    - Bezier Curves
+    - B-Splines
+    - NURBS: Non-Uniform Rational B-Splines (not in this course)
+    

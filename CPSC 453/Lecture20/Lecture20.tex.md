@@ -22,3 +22,8 @@ do
     e = e -> pair -> next
 while e != e_0
 ```
+
+## Shading
+- Add realism
+- Shading Model
+- Simplification fo physical model

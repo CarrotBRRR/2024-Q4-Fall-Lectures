@@ -161,3 +161,22 @@ if(r \cdot v < 0){
     I_s = 0
 }
 ```
+
+### Incorporating Distance
+```math
+d = s - p
+```
+```math
+I(s, p) = \frac{I(p)}{d^2}
+```
+
+#### Phong
+```math
+I = f\frac{I(P)}{a + bd + c d^2}
+```
+where a, b, c are experimentally determined constants
+
+So, the final equation is
+```math
+I(P) = \frac{I_a}{a + bd + c d^2} (K_a L_a + K_d L_d (l \cdot n) + K_s L_s (r \cdot v)^\alpha)
+```

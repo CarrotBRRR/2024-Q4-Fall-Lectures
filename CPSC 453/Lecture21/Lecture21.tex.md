@@ -149,7 +149,15 @@ I_a = K_a L_a
 ```math
 I(P) = I_a + I_d + I_s
 ```
-## Phong Reflection Model
+### Phong Reflection Model
 ```math
 I = K_a L_a + K_d L_d (l \cdot n) + K_s L_s (r \cdot v)^\alpha
+```
+```c
+if(l \cdot n < 0){
+    I_d = 0
+}
+if(r \cdot v < 0){
+    I_s = 0
+}
 ```
